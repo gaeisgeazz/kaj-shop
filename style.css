@@ -1,0 +1,1013 @@
+/* Reset de base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+/* Header principal */
+.header {
+  width: 100%;
+  background-color: #1a1a1a;
+  color: #f1f1f1;
+}
+
+/* De base */
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: white;
+  /* adapte selon ton thème */
+  cursor: pointer;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+/* Responsive pour mobiles */
+@media (max-width: 768px) {
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  #nav-menu {
+    display: none;
+    flex-direction: column;
+    background-color: #111;
+    /* fond du menu */
+    top: 100px;
+    /* ajuste selon la hauteur de ton header */
+    right: 0;
+    width: 200px;
+    padding: 10px;
+  }
+
+  #nav-menu.active {
+    display: flex;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+
+/* Bande de contact en haut */
+.contact-top {
+  background-color: #111;
+  text-align: center;
+  padding: 0.5rem;
+  font-size: 0.9rem;
+  border-bottom: 1px solid #333;
+}
+
+.contact-top span {
+  margin: 0 1rem;
+  color: #ccc;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  flex-wrap: wrap;
+}
+
+/* Logo */
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #f8b400;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Liens de navigation */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: #f1f1f1;
+  text-decoration: none;
+  font-size: 1rem;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: #f8b400;
+  left: 0;
+  bottom: -4px;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #f8b400;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* Section Banner */
+.banner {
+  background: url(img/banner.jpg) no-repeat center center/cover;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 4rem 2rem;
+  color: #fff;
+  position: relative;
+}
+
+.banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  /* overlay sombre */
+  z-index: 0;
+}
+
+.banner h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  z-index: 1;
+  color: #f8b400;
+}
+
+.banner p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  z-index: 1;
+  max-width: 600px;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  z-index: 1;
+}
+
+.btn {
+  background-color: #f8b400;
+  color: #121212;
+  padding: 0.8rem 1.5rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.btn:hover {
+  background-color: #fff;
+  color: #121212;
+  transform: translateY(-3px);
+}
+
+
+/* Section À propos */
+.about-section {
+  background-color: #1a1a1a;
+  color: #f1f1f1;
+  padding: 4rem 2rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Contenu en flex */
+.about-content {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Image */
+.about-image {
+  flex: 1 1 400px;
+  text-align: center;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 1rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Texte */
+.about-text {
+  flex: 1 1 400px;
+}
+
+.about-text h2 {
+  font-size: 2.5rem;
+  color: #f8b400;
+  margin-bottom: 1rem;
+}
+
+.about-text p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.about-text ul {
+  list-style: none;
+  padding-left: 1rem;
+  margin-bottom: 1rem;
+}
+
+.about-text ul li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.about-text ul li::before {
+  content: '✔';
+  position: absolute;
+  left: 0;
+  color: #f8b400;
+}
+
+.whyus {
+  background-color: #111;
+  /* fond sombre */
+  color: #eee;
+  /* texte clair */
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.whyus h1 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.box-argument-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.box-argument {
+  background-color: #1b1b1b;
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 30px 20px;
+  width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.box-argument:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+}
+
+.box-argument h3 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #888;
+}
+
+.box-argument h4 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #ccc;
+}
+
+.box-argument p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #aaa;
+}
+
+/* Section globale */
+#menu {
+  background-color: #111;
+  color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+#menu>p {
+  font-size: 1.2rem;
+  color: #aaa;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.trait {
+  width: 60px;
+  height: 4px;
+  background: #f8b400;
+  margin: 0 auto 20px auto;
+  border-radius: 2px;
+}
+
+#menu h3 {
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+/* Mini en-tête avec les catégories */
+.tiny-header ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  list-style: none;
+  margin-bottom: 40px;
+  padding: 0;
+}
+
+.tiny-header li {
+  padding: 10px 20px;
+  border: 1px solid #f8b400;
+  border-radius: 20px;
+  cursor: pointer;
+  color: #f8b400;
+  transition: all 0.3s ease;
+}
+
+.tiny-header li:hover {
+  background-color: #f8b400;
+  color: #111;
+}
+
+/* Liste des plats */
+.list-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 10px;
+  padding: 15px 20px;
+  margin: 15px auto;
+  max-width: 600px;
+  gap: 15px;
+  transition: transform 0.3s ease;
+}
+
+.list-menu:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.05);
+}
+
+/* Image du menu */
+#img-menu {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 50%;
+  background-color: #333;
+  /* pour le fond si pas d'image */
+}
+
+/* Nom du plat */
+.list-menu p {
+  flex: 1;
+  text-align: left;
+  color: #ccc;
+  margin: 0;
+  font-size: 1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Prix */
+.list-menu .price {
+  color: #f8b400;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-left: 10px;
+  flex-shrink: 0;
+}
+
+#specials {
+  background-color: #111;
+  color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+#specials>p {
+  font-size: 1.2rem;
+  color: #aaa;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.trait {
+  width: 60px;
+  height: 4px;
+  background: #f8b400;
+  margin: 10px auto;
+  border-radius: 2px;
+}
+
+#specials h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.big-trait {
+  width: 100px;
+  height: 4px;
+  background: #f8b400;
+  margin: 0 auto 40px auto;
+  border-radius: 2px;
+}
+
+/* Liste des liens/éléments */
+#specials ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+#specials ul li {
+  background-color: transparent;
+  border: 1px solid #f8b400;
+  color: #f8b400;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#specials ul li:hover {
+  background-color: #f8b400;
+  color: #111;
+}
+
+/* Contenu du plat spécial */
+.dish-desc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.dish {
+  width: 300px;
+  height: 300px;
+  background-color: #333;
+  border-radius: 20px;
+  background-image: url(img/imgs2.jpg);
+  /* à remplacer par une vraie image */
+  background-size: cover;
+  background-position: center;
+}
+
+.desc {
+  max-width: 500px;
+  text-align: left;
+}
+
+.desc h4 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #f8b400;
+}
+
+.desc p {
+  font-size: 1rem;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+#reservation {
+  background-color: #111;
+  color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+#reservation>p {
+  font-size: 1.2rem;
+  color: #aaa;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.trait {
+  width: 60px;
+  height: 4px;
+  background: #f8b400;
+  margin: 10px auto 20px auto;
+  border-radius: 2px;
+}
+
+#reservation h3 {
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  color: #fff;
+}
+
+/* Formulaire */
+#reservation form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #1a1a1a;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+}
+
+#reservation label {
+  text-align: left;
+  font-weight: bold;
+  color: #f8b400;
+}
+
+#reservation input {
+  padding: 12px 15px;
+  border: 1px solid #444;
+  border-radius: 8px;
+  background-color: #222;
+  color: #fff;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+#reservation input:focus {
+  outline: none;
+  border-color: #f8b400;
+}
+
+/* Bouton */
+#reservation button {
+  padding: 12px 20px;
+  background-color: #f8b400;
+  border: none;
+  border-radius: 8px;
+  color: #111;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#reservation button:hover {
+  background-color: #9e7609;
+  color: #eee;
+}
+
+.gallery {
+  background-color: #111;
+  color: #fff;
+  padding: 60px 20px;
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+}
+
+.gallery h2 {
+  font-size: 2.2rem;
+  color: #fff;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.gallery h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #f8b400;
+  margin: 10px auto 0 auto;
+  border-radius: 2px;
+}
+
+/* Grille de la galerie */
+.gallery div {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+/* Images */
+.gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 10px rgba(255, 255, 255, 0.05);
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(233, 30, 99, 0.4);
+}
+
+.team {
+  background-color: #111;
+  color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.team h2 {
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.team h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #f8b400;
+  margin: 10px auto 0 auto;
+  border-radius: 2px;
+}
+
+/* Conteneur des membres */
+.team>div {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+/* Carte de membre */
+.team>div>div {
+  background-color: #1a1a1a;
+  border-radius: 12px;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.03);
+}
+
+.team>div>div:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(233, 30, 99, 0.3);
+}
+
+/* Image */
+.team img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+/* Nom */
+.team h3 {
+  font-size: 1.2rem;
+  color: #f8b400;
+  margin-bottom: 5px;
+}
+
+/* Poste */
+.team p {
+  font-size: 1rem;
+  color: #ccc;
+}
+
+#contact {
+  background-color: #111;
+  color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+#contact>p {
+  font-size: 1.2rem;
+  color: #aaa;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.trait {
+  width: 60px;
+  height: 4px;
+  background: #f8b400;
+  margin: 10px auto 20px auto;
+  border-radius: 2px;
+}
+
+#contact h3 {
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+/* Formulaire de contact */
+.contact-form {
+  background-color: #1a1a1a;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+/* Champ de texte */
+.contact-form label {
+  text-align: left;
+  font-weight: bold;
+  color: #f8b400;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #444;
+  border-radius: 8px;
+  background-color: #222;
+  color: #fff;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #f8b400;
+}
+
+/* Bouton */
+.contact-form button {
+  padding: 12px 20px;
+  background-color: #f8b400;
+  border: none;
+  border-radius: 8px;
+  color: #111;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #9e7609;
+  color: #eee;
+}
+
+
+footer {
+  background-color: #111;
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+footer p {
+  font-size: 1rem;
+  color: #aaa;
+  margin: 10px 0;
+}
+
+footer p:first-child {
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+footer .social-icons {
+  margin: 20px 0;
+}
+
+footer .social-icons a {
+  margin: 0 10px;
+  display: inline-block;
+}
+
+footer .social-icons img {
+  width: 32px;
+  height: 32px;
+  transition: transform 0.3s ease;
+}
+
+footer .social-icons a:hover img {
+  transform: scale(1.2);
+}
+
+
+
+
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+
+  .nav-links a {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #333;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .banner h2 {
+    font-size: 2rem;
+  }
+
+  .banner p {
+    font-size: 1rem;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+  }
+
+  .about-text h2 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .about-text p,
+  .about-text ul {
+    text-align: center;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .box-argument-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .list-menu {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  .list-menu p {
+    text-align: left;
+    white-space: normal;
+  }
+
+  .list-menu .price {
+    align-self: flex-end;
+    margin-top: 10px;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .dish-desc {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .desc {
+    text-align: center;
+  }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  #reservation form {
+    padding: 20px;
+  }
+}
+
+/* Responsive spacing */
+@media (max-width: 600px) {
+  .gallery {
+    padding: 40px 10px;
+  }
+
+  .gallery h2 {
+    font-size: 1.8rem;
+  }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  #contact h3 {
+    font-size: 1.8rem;
+  }
+
+  .contact-form {
+    padding: 20px;
+  }
+
+  .contact-form label,
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 1rem;
+  }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  footer p {
+    font-size: 0.9rem;
+  }
+
+  footer .social-icons a {
+    margin: 0 8px;
+  }
+
+  footer .social-icons img {
+    width: 28px;
+    height: 28px;
+  }
+}
